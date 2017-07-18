@@ -65,6 +65,8 @@ echo "----> Starting x2464 compilation"
 echo "Cloning x264 repo" | indent
 git clone git://git.videolan.org/x264.git >/dev/null 2>&1
 cd x264
+echo "Switching to pre-nasm commit" | indent
+git reset --hard 8c2974255b01728d4eda2434cc1997c4a3ca5eff
 echo "Running configure" | indent
 ./configure --prefix="$BUILD_DIR" --enable-static --enable-shared >/dev/null 2>&1
 echo "Running make with target install" | indent
