@@ -86,7 +86,7 @@ tar -xf ffmpeg-3.0.2.tar
 cd ffmpeg-3.0.2
 echo "Running configure" | indent
 
-./configure  --prefix="$BUILD_DIR" --enable-libmp3lame --extra-cflags="-I$BUILD_DIR/include" --extra-ldflags="-L$BUILD_DIR/lib" --enable-shared --enable-pthreads --enable-gpl --enable-version3 --enable-hardcoded-tables --enable-avresample --enable-gpl --enable-libx264 --disable-doc #>/dev/null 2>&1
+./configure  --prefix="$BUILD_DIR" --enable-libmp3lame --enable-libfdk-aac --extra-cflags="-I$BUILD_DIR/include" --extra-ldflags="-L$BUILD_DIR/lib" --enable-shared --enable-pthreads --enable-gpl --enable-version3 --enable-hardcoded-tables --enable-avresample --enable-nonfree --enable-libx264 --disable-doc #>/dev/null 2>&1
 
 echo "Running make with target install" | indent
 make install #>/dev/null 2>&1
